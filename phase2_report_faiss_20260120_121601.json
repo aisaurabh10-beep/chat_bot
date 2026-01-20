@@ -1,0 +1,19 @@
+{
+  "phase": 2,
+  "timestamp": "2026-01-20T12:16:01.316509",
+  "input_file": "cleaned_data\\clean_data_20260119_145839.json",
+  "statistics": {
+    "total_pages": 27,
+    "total_chunks": 288,
+    "avg_chunk_size": 527.7256944444445,
+    "embedding_dimension": 384
+  },
+  "configuration": {
+    "chunk_size": 600,
+    "chunk_overlap": 100,
+    "embedding_model": "all-MiniLM-L6-v2",
+    "vector_db": "FAISS",
+    "db_path": "vector_db_faiss",
+    "device": "CPU"
+  }
+}
