@@ -1,0 +1,22 @@
+[
+  {
+    "timestamp": "2026-02-02T21:09:05.954525",
+    "user_id": "ab",
+    "question": "what is your projects",
+    "answer": "We have a range of projects showcasing our expertise in web development and IT solutions. Some of our featured projects include:\n\n*   **UrbanAxis:** A Next.js website developed with a focus on SEO for business growth. You can learn more here: [UrbanAxis: Next.js Website with SEO for Business Growth](https://bharathatechno.com/work/urban-axis)\n*   **EverwinPT:** Static website development to enhance online presence.\n*   **Train 2 Gain:** Custom WordPress website development for this client.\n*   **Sachniti:** Static website development for Sachniti.\n*   **Intignus Biotech:** Custom WordPress website development.\n*   **R3Constructor:** Next.js website development.\n*   **Snumero:** A Next.js website with local SEO optimization.\n*   **Trendy Threads:** An e-commerce web app.\n*   **Nikita's Curry Corner:** A custom Indian food delivery website.\n\nWe also have a fitness platform called Shrednshape. You can explore more of our work on our website.",
+    "sources": [
+      {
+        "title": "UrbanAxis: Next.js Website with SEO for Business Growth",
+        "url": "https://bharathatechno.com/work/urban-axis"
+      },
+      {
+        "title": "Static Website Development for EverwinPT",
+        "url": "https://bharathatechno.com/work/everwinpt"
+      },
+      {
+        "title": "Train 2 Gain: Custom WordPress Website Development",
+        "url": "https://bharathatechno.com/work/train-2-gain"
+      }
+    ]
+  }
+]
