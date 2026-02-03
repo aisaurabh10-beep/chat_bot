@@ -1,0 +1,42 @@
+[
+  {
+    "timestamp": "2026-02-03T19:48:25.443714",
+    "user_id": "1",
+    "question": "Hello",
+    "answer": "Hello there! How can I help you today?",
+    "sources": [
+      {
+        "title": "Software Development and Consulting | BharathaTechno IT Pvt. Ltd.",
+        "url": "https://bharathatechno.com/contact"
+      },
+      {
+        "title": "BharathaTechno IT | Software Product Development & IT Solutions",
+        "url": "https://bharathatechno.com/about"
+      },
+      {
+        "title": "MERN Stack Development Services | Scalable Apps Made Simple",
+        "url": "https://bharathatechno.com/blog/mern-stack"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-02-03T19:48:54.071246",
+    "user_id": "1",
+    "question": "tell me something about your services",
+    "answer": "BharathaTechno IT offers a range of services to help businesses thrive. We specialize in:\n\n*   **Staff Augmentation**: Providing expert MERN and MEAN stack professionals to bolster your development teams. You can learn more about this service here: [Staff Augmentation Services](https://bharathatechno.com/offerings/services/staff-augmentation)\n*   **Full Stack Development**: Creating robust web and mobile applications.\n*   **Custom ERP Solutions**: Tailoring Enterprise Resource Planning systems to your specific business needs.\n*   **UI/UX & Brand Design**: Crafting engaging user interfaces and strong brand identities.\n*   **Technical Documentation**: Providing clear and comprehensive technical documentation.\n*   **Performance Marketing**: Implementing strategies to boost your online presence and conversions.\n*   **Cloud Infrastructure Management**: Offering comprehensive solutions for efficiency, security, and scalability in the cloud. You can find more details here: [Cloud Infrastructure Management Services](https://bharathatechno.com/offerings/services/cloud-infrastructure-management)\n\nWe also have a product called B-Chef, a food ordering and delivery software designed to maximize profits and enhance customer satisfaction: [B-Chef: Food Ordering & Delivery Software](https://bharathatechno.com/offerings/products/b-chef).\n\nAdditionally, we offer MERN stack development services, with applications in various industries like Healthcare, Education, E-Commerce, Logistics, Real Estate, and Fintech. You can read more about MERN stack development here: [MERN Stack Development Services](https://bharathatechno.com/blog/mern-stack).",
+    "sources": [
+      {
+        "title": "Privacy Policy | BharathaTechno IT Pvt. Ltd.",
+        "url": "https://bharathatechno.com/privacy-policy"
+      },
+      {
+        "title": "Staff Augmentation Services | MERN & MEAN Stack Experts",
+        "url": "https://bharathatechno.com/offerings/services/staff-augmentation"
+      },
+      {
+        "title": "MERN Stack Development Services | Scalable Apps Made Simple",
+        "url": "https://bharathatechno.com/blog/mern-stack"
+      }
+    ]
+  }
+]
