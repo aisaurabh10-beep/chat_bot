@@ -1,0 +1,6 @@
+*.json
+data/
+external_data/
+processed_data/
+user_chat_logs/
+old_project/

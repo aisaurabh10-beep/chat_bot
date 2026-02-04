@@ -25,7 +25,10 @@ DB_PATH = "vector_db_faiss"
 LOGS_DIR = "user_chat_logs"  # Directory to store user history
 # GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
-GOOGLE_API_KEY="AIzaSyBBDrDHerfWSqTb4eIFe6B5thr08P6FYTE"
+# GOOGLE_API_KEY="AIzaSyBBDrDHerfWSqTb4eIFe6B5thr08P6FYTE"
+GOOGLE_API_KEY="AIzaSyAsqJyOfukbt3N53XLaAvE_HVNSSaS_kic"
+
+
 
 if GOOGLE_API_KEY:
     genai.configure(api_key=GOOGLE_API_KEY)
@@ -48,7 +51,7 @@ class Source(BaseModel):
 
 class ChatResponse(BaseModel):
     answer: str
-    sources: List[Source]
+    # sources: List[Source]
     session_id: str
 
 # ---------------------------------------------------------
@@ -189,7 +192,7 @@ class RAGChatbot:
         # Format history for prompt
         history_text = ""
         if history:
-            recent_history = history[-6:] # Last few messages
+            recent_history = history[-10:] # Last few messages
             history_text = "\nRECENT CONVERSATION:\n"
             for msg in recent_history:
                 role_label = "User" if msg.role == "user" else "Assistant"
@@ -237,7 +240,7 @@ USER QUESTION: {query}
 RESPOND NOW:"""
 
         # Generation
-        models_to_try = ['gemini-2.5-flash-lite', 'gemini-1.5-flash']
+        models_to_try = ['gemini-2.5-flash-lite']
         
         for model_name in models_to_try:
             try:
@@ -327,7 +330,7 @@ async def chat_endpoint(request: ChatRequest, background_tasks: BackgroundTasks)
     
     return ChatResponse(
         answer=answer, 
-        sources=sources,
+        # sources=sources,
         session_id=request.user_id
     )
 
