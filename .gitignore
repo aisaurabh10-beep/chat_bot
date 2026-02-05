@@ -4,3 +4,6 @@ external_data/
 processed_data/
 user_chat_logs/
 old_project/
+cleaned_data/
+*.md
+
