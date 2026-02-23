@@ -107,16 +107,37 @@ class VectorDatabaseBuilder:
     def process_single_file(self, file_path: str):
         """Extract text from a single file and chunk it"""
         filename = os.path.basename(file_path)
-        text = ""
         
         try:
             # Extract Text based on extension
             if file_path.endswith('.pdf'):
                 reader = PdfReader(file_path)
-                for page in reader.pages:
-                    text += (page.extract_text() or "") + "\n"
+                total_pdf_chunks = 0
+                for page_number, page in enumerate(reader.pages, start=1):
+                    page_text = re.sub(r'\s+', ' ', (page.extract_text() or "")).strip()
+                    if not page_text:
+                        continue
+
+                    metadata = {
+                        'page_id': f"doc_{filename}",
+                        'title': filename,
+                        'url': 'External Document',
+                        'source': 'local_file',
+                        'doc_type': 'pdf',
+                        'page_number': page_number
+                    }
+                    page_chunks = self.chunk_text(page_text, metadata)
+                    self.chunks.extend(page_chunks)
+                    total_pdf_chunks += len(page_chunks)
+
+                if total_pdf_chunks == 0:
+                    print(f"   ⚠️ Skipping empty file: {filename}")
+                    return
+                print(f"   + Added {filename} ({total_pdf_chunks} chunks)")
+                return
             
             elif file_path.endswith('.docx'):
+                text = ""
                 doc = Document(file_path)
                 for para in doc.paragraphs:
                     text += para.text + "\n"
@@ -124,6 +145,8 @@ class VectorDatabaseBuilder:
             elif file_path.endswith('.txt'):
                 with open(file_path, 'r', encoding='utf-8') as f:
                     text = f.read()
+            else:
+                return
 
             # Clean generic whitespace for better chunking
             text = re.sub(r'\s+', ' ', text).strip()
@@ -137,7 +160,8 @@ class VectorDatabaseBuilder:
                 'page_id': f"doc_{filename}",
                 'title': filename,
                 'url': 'External Document', 
-                'source': 'local_file'
+                'source': 'local_file',
+                'doc_type': 'document'
             }
             
             # Chunk

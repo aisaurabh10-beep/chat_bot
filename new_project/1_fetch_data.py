@@ -15,7 +15,7 @@ print('Starting Firecrawl Data Collection & Saving...')
 # ============================================================
 API_KEY = "fc-7de9c85379534de6969dbaa8d8b0bf0a"  # Replace with your key
 BASE_URL = "https://api.firecrawl.dev/v2"
-TARGET_URL = "https://bharathatechno.com/"
+TARGET_URL = "https://www.jagatgururampalji.org/"
 
 headers = {
     'Authorization': f'Bearer {API_KEY}',
