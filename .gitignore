@@ -1,9 +1,54 @@
-*.json
+
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Virtual environments
+venv/
+env/
+chatbotenv/
+.venv/
+
+# Python version managers
+.python-version
+
+# Environment variables
+.env
+
+# Logs
+*.log
+user_chat_logs/
+
+# Data folders (pipeline outputs)
 data/
 external_data/
 processed_data/
-user_chat_logs/
-old_project/
-cleaned_data/
-*.md
 
+# # Vector database (optional – only ignore if you regenerate it)
+# vector_db_faiss/*.faiss
+# vector_db_faiss/*.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Docker
+docker-compose.yml
+*.tar
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Git
+.git/

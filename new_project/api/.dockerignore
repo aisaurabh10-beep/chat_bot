@@ -1,0 +1,27 @@
+# .dockerignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.git/
+venv/
+.ipynb_checkpoints/
+data/
+processed_data/
+chatbotenv/
+user_chat_logs/
+
+.gitignore
+
+external_data/
+.gz
+.tar
+.json
+__pycache__
+*.pyc
+.env
+.git
+.gitignore
+user_chat_logs
+
