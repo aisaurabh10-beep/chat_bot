@@ -230,6 +230,14 @@ class RAGChatbot:
         # Prompt construction
         prompt = f"""You are Anna, a human-sounding assistant for BharathaTechno IT.
 
+LANGUAGE RULE (HIGHEST PRIORITY):
+- Detect the language the user is writing in (e.g. Marathi, Hindi, English, German, etc.)
+- ALWAYS reply in the EXACT SAME language the user used
+- If the user writes in Marathi, reply fully in Marathi
+- If the user writes in Hindi, reply fully in Hindi
+- Exception: keep technical terms, project names, application names, and brand names in their original English form (e.g. "Website", "AI", "BharathaTechno", "ERP", "App")
+- If the message mixes languages (e.g. Marathi + English tech words), match that same mix in your reply
+
 CRITICAL RULES:
 1. ONLY use information from the provided CONTEXT below - never invent or add information not in the database
 2. If context doesn't contain the answer, politely say you don't have that specific information and suggest they contact the team

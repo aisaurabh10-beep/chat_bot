@@ -43,7 +43,7 @@ class VectorDatabaseBuilder:
         # Configuration
         self.chunk_size = 600
         self.chunk_overlap = 100
-        self.db_path = "vector_db_faiss"
+        self.db_path = "../api/vector_db_faiss"
         self.external_dir = "external_data"  # Folder for local files
         
         # CPU-friendly settings
