@@ -23,7 +23,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/chatbot-api:latest ./api
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/chatbot-api:latest ./new_project/api
 
     - name: Push Docker image
       run: |
